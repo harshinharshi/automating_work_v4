@@ -279,6 +279,7 @@ def gpt_run():
 
                             # Wait for the element to be fully visible
                             WebDriverWait(driver, 10).until(EC.visibility_of(img))
+                            time.sleep(5)
                             img.screenshot(file_path)
 
                             with open(file_path, 'rb') as imgfile:

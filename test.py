@@ -4,11 +4,19 @@ import json
 import pandas as pd
 from close_chrome import close_chrome_on_port_windows
 from reading_from_excel import reading_the_excel_file
+from removing_folder import remove_directory
+from opening_browsers import open_chrome_with_shell
 
+remove_directory()
+open_chrome_with_shell()
+
+print("exiting shell commands")
 file_path = r"C:\\Users\\harsh\\OneDrive\\Desktop\\test.xlsx"
 path_from_excel = {'fictional_character_battles_complex.csv' : 'https://drive.google.com/file/d/1RHpV_YWXJ41fidiTLuqLzmKiQgMKNCnT/view?usp=sharing',
                    'manufacturing_defect_dataset.csv' : 'https://drive.google.com/file/d/1OgOQk1WNWCRHYE4iFiQB9ZHs9PrktKz-/view?usp=sharing',
-                   'Student_performance_data _.csv' : 'https://drive.google.com/file/d/1DUoGIfsP_mLzV-oS421oe51lIhDvZrdI/view?usp=drive_link'
+                   'Student_performance_data _.csv' : 'https://drive.google.com/file/d/1DUoGIfsP_mLzV-oS421oe51lIhDvZrdI/view?usp=drive_link',
+                   'Labeled-Amazon-Reviews-Dataset.csv' :'https://drive.google.com/file/d/1ZgOOdHF6p4AVRpNDtXzaPFpIrUTFxk9p/view?usp=sharing',
+                   'british_airways_review.csv' : 'https://drive.google.com/file/d/1D-S_Xsn3twHCnswzB7xOVHQPiDIh1nRa/view?usp=sharing'
 }
 
 
@@ -58,3 +66,5 @@ for i in rows_list:
     print("exiting geminin")
     print("\n completed row id :" ,i[0])
 print("done")
+
+close_chrome_on_port_windows(9222)
